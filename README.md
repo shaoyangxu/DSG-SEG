@@ -5,6 +5,8 @@ In addition, the idea of our method is basically from [《Every Document Owns It
 Graph Neural Networks》](https://arxiv.org/abs/2004.13826)([code for TextING](https://github.com/CRIPAC-DIG/TextING)) and [《Graph Convolutional Networks for Text Classification》](https://arxiv.org/abs/1809.05679)([code for TextGCN](https://github.com/yao8839836/text_gcn)).
 Thank them all for their works.
 
+![image](https://user-images.githubusercontent.com/59757561/109381832-97079f80-7917-11eb-839c-d0c6f4f70dd7.png#pic_center)
+
 # Requirements
 pytorch=1.7.1
 
@@ -30,8 +32,6 @@ http://groups.csail.mit.edu/rbg/code/mallows/
 MANIFESTO:
 https://github.com/koomri/text-segmentation/tree/master/data/manifesto
 
-word2vec:
-https://drive.google.com/a/audioburst.com/uc?export=download&confirm=zrin&id=0B7XkCwpI5KDYNlNUTTlSS21pQmM
 
 
 # Usage
