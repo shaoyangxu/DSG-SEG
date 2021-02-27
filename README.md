@@ -34,7 +34,7 @@ http://groups.csail.mit.edu/rbg/code/mallows/
 MANIFESTO:
 https://github.com/koomri/text-segmentation/tree/master/data/manifesto
 
-
+This preprocessing code is http://localhost:8888/tree/Desktop/Jupyter/preprocess
 
 # Usage
 Start training as:
@@ -42,7 +42,7 @@ Start training as:
 python run.py [--train_data_type {wiki,choi,wikisection}]
               [--etype {one_hot,glove,randn,w2v,bert}] [--encoder_fine_tune]
               [--sr_choose {f_model,l_model,s_model,t_model,g_model,b_model,random_baseline}]
-              [--tr_choose {balanced,left,right}] [--use_leaf_rnn]
+              [--tr_choose {balanced,left,right}]
               [--gr_choose {textgcn,texting,ING_GCN,S_ING_GCN}]
               [--gnn_window_size GNN_WINDOW_SIZE]
               [--texting_gru_step TEXTING_GRU_STEP]
