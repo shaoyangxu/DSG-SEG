@@ -1,2 +1,3 @@
 # ING-GCN
-The code for 《Topic Segmentation based on Graph Neural Networks》
+The code and dataset for paper 《Topic Segmentation based on Graph Neural Networks》, implemented in Pytorch. 
+
