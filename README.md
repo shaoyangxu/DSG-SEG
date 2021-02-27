@@ -4,9 +4,9 @@ Please note that our work is mainly based on [《Text Segmentation as a Supervis
 In addition, the idea of our method is basically from [《Every Document Owns Its Structure: Inductive Text Classification via
 Graph Neural Networks》](https://arxiv.org/abs/2004.13826)([code for TextING](https://github.com/CRIPAC-DIG/TextING)) and [《Graph Convolutional Networks for Text Classification》](https://arxiv.org/abs/1809.05679)([code for TextGCN](https://github.com/yao8839836/text_gcn)).
 Thank them all for their works.
-
+<div align=center>
 ![image](https://user-images.githubusercontent.com/59757561/109381832-97079f80-7917-11eb-839c-d0c6f4f70dd7.png#pic_center)
-
+</div>
 # Requirements
 pytorch=1.7.1
 
