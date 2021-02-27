@@ -6,7 +6,7 @@ Graph Neural Networks》](https://arxiv.org/abs/2004.13826)([code for TextING](h
 Thank them all for their works.
 
 <div align=center>
-<img src=https://user-images.githubusercontent.com/59757561/109381832-97079f80-7917-11eb-839c-d0c6f4f70dd7.png)
+<img src="https://user-images.githubusercontent.com/59757561/109381832-97079f80-7917-11eb-839c-d0c6f4f70dd7.png">
 </div>
 
 # Requirements
