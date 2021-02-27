@@ -16,7 +16,7 @@ pytorch=1.7.1
 word2vec:
 https://drive.google.com/a/audioburst.com/uc?export=download&confirm=zrin&id=0B7XkCwpI5KDYNlNUTTlSS21pQmM
 
-wiki-727K, wiki-50:
+WIKI-727K, WIKI-50:
 https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0
 
 WIKI-SECTION:
@@ -34,7 +34,8 @@ http://groups.csail.mit.edu/rbg/code/mallows/
 MANIFESTO:
 https://github.com/koomri/text-segmentation/tree/master/data/manifesto
 
-This preprocessing code is http://localhost:8888/tree/Desktop/Jupyter/preprocess
+File paths of WIKI-10K we used:
+https://drive.google.com/drive/folders/1dYPGOBhXK3kY6ib5pmIKEVmZ5athMMXO
 
 # Usage
 Start training as:
