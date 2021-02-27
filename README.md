@@ -11,20 +11,28 @@ pytorch=1.7.1
 # Required Resources
 word2vec:
 https://drive.google.com/a/audioburst.com/uc?export=download&confirm=zrin&id=0B7XkCwpI5KDYNlNUTTlSS21pQmM
+
 wiki-727K, wiki-50:
 https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0
+
 WIKI-SECTION:
 https://github.com/sebastianarnold/WikiSection
+
 CHOI:
 https://github.com/koomri/text-segmentation/tree/master/data/choi
+
 CLINICAL:
 https://github.com/pinkeshbadjatiya/neuralTextSegmentation/tree/master/code/data/clinical
+
 CITIES,ELEMENTS:
 http://groups.csail.mit.edu/rbg/code/mallows/
+
 MANIFESTO:
 https://github.com/koomri/text-segmentation/tree/master/data/manifesto
+
 word2vec:
 https://drive.google.com/a/audioburst.com/uc?export=download&confirm=zrin&id=0B7XkCwpI5KDYNlNUTTlSS21pQmM
+
 
 # Usage
 Start training as:
