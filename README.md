@@ -56,6 +56,8 @@ https://drive.google.com/drive/folders/1dYPGOBhXK3kY6ib5pmIKEVmZ5athMMXO
 
 下载并解压WIKI-727K之后，把上面链接中的`dev_random_paths`,`test_random_paths`,`train_random_paths`分别放在`wiki_727K\dev`,`wiki_727K\test`,`wiki_727K\train`路径下，并都改名为`random_paths`
 
+下载完并解压所有数据集，一共得到八个文件夹:wiki_727\choi\wikicites\wiki_50\clinical\manifesto\WikiSection\wikielements，记得在parameters.py中修改对应的路径.
+
 # 代码简介
 |文件(夹)名|作用|
 |-|-|
@@ -113,4 +115,8 @@ python run.py --etype=one-hot --sr_choose=f_model
 latent-sr:
 ```python
 python run.py --etype=one-hot --sr_choose=l_model
+```
+random-baseline:
+```python
+
 ```
