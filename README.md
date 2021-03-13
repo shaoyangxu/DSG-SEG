@@ -118,5 +118,5 @@ python run.py --etype=one-hot --sr_choose=l_model
 ```
 random-baseline:
 ```python
-
+python run.py --sr_choose=random_baseline --infer --train_bs=1 --dev_bs=1 --test_bs=1
 ```
