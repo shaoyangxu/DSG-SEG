@@ -23,7 +23,47 @@ python依赖库
 pip install -r requirements.txt
 ```
 
-# 必要资源（假设所有文件均下载到了/data路径下）
+# 资源获取  
+假设所有资源保存在/data路径下，完成这部分，你将得到:  
+├──data  
+│  ├──GoogleNews-vectors-negative300.bin  
+│  ├──wiki_727    
+│  │  ├──test  
+│  │  ├──dev  
+│  │  └──train  
+│  ├──wiki_50    
+│  ├──wikisection    
+│  │  ├──wikisection_en_city_test.json  
+│  │  ├──wikisection_en_city_validation.json  
+│  │  ├──wikisection_en_city_train.json  
+│  │  ├──wikisection_en_disease_test.json  
+│  │  ├──wikisection_en_disease_validation.json  
+│  │  └──wikisection_en_disease_train.json  
+│  ├──choi  
+│  │  ├──4  
+│  │  ├──3  
+│  │  ├──2  
+│  │  └──1  
+│  ├──manifesto    
+│  │  ├──61620_201211.txt  
+│  │  ├──61620_200811.txt  
+│  │  ├──61620_200411.txt  
+│  │  ├──61320_201211.txt  
+│  │  ├──61320_200811.txt  
+│  │  └──61320_200411.txt  
+│  ├──clinical      
+│  │  ├──000.ref   
+│  │  ├──001.ref  
+│  │  └──...  
+│  ├──wikicities      
+│  │  ├──wikicities.merged_text       
+│  │  ├──wikicities.text  
+│  │  └──...  
+│  ├──wikielements     
+│  │  ├──wikielements.text         
+│  │  ├──wikielements.vocab  
+│  │  └──...  
+
 word2vec:  
 wget https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz  
 gzip -d GoogleNews-vectors-negative300.bin.gz  
@@ -32,66 +72,31 @@ gzip -d GoogleNews-vectors-negative300.bin.gz
 WIKI_727K:  
 wget https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0&preview=wiki_727K.tar.bz2  
 tar -xjf wiki_727K.tar.bz2  
-解压完毕得到:  
-├──wiki_727  
-│  ├──test  
-│  ├──dev  
-│  └──train  
 
 wiki_test_50:  
 wget https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0&preview=wiki_test_50.tar.bz2  
 tar -xjf wiki_test_50.tar.bz2  
-解压完毕得到:data  
-为了方便区分:mv data wiki_50  
 
 WIKI-SECTION:
 wget https://github.com/sebastianarnold/WikiSection/raw/master/wikisection_dataset_json.tar.gz  
 mkdir wikisection  
 tar -zxvf wikisection_dataset_json.tar.gz -C wikisection  
 rm wikisection/*_de_*  
-得到:  
-├──wikisection  
-│  ├──CREDIT  # not used  
-│  ├──LICENSE  # not used  
-│  ├──SOURCES  # not used  
-│  ├──wikisection_en_city_test.json  
-│  ├──wikisection_en_city_validation.json  
-│  ├──wikisection_en_city_train.json  
-│  ├──wikisection_en_disease_test.json  
-│  ├──wikisection_en_disease_validation.json  
-│  ├──wikisection_en_disease_train.json  
-│  └──wikisection_en_city_test.json  
   
 CHOI:  
 手动下载 https://github.com/koomri/text-segmentation/tree/master/data/choi  
 mkdir choi  
-放入文件，得到:  
-├──choi  
-│  ├──4  
-│  ├──3  
-│  ├──2  
-│  └──1  
+放入文件夹  
   
 MANIFESTO:  
 手动下载 https://github.com/koomri/text-segmentation/tree/master/data/manifesto
 mkdir manifesto
-放入文件，得到:
-├──manifesto    
-│  ├──61620_201211.txt  
-│  ├──61620_200811.txt  
-│  ├──61620_200411.txt  
-│  ├──61320_201211.txt  
-│  ├──61320_200811.txt  
-│  └──61320_200411.txt  
+放入文件夹  
   
 CLINICAL:  
 手动下载 https://github.com/pinkeshbadjatiya/neuralTextSegmentation/tree/master/code/data/clinical
 mkdir clinical
-放入文件，得到:
-├──clinical    
-│  ├──000.ref   
-│  ├──001.ref  
-│  └──...  
+放入文件夹    
   
 CITIES:  
 wget http://groups.csail.mit.edu/rbg/code/mallows/data/wikicities-english.tar.gz  
@@ -100,28 +105,10 @@ rm -r wikicities-english/test
 mv wikicities-english/training/* wikicities-english/  
 rm -r wikicities-english/training  
 mv wikicities-english wikicities  
-得到:  
-├──wikicities    
-│  ├──wikicities.merged_text       
-│  ├──wikicities.text  
-│  └──...  
 
 ELEMENTS:  
 wget http://groups.csail.mit.edu/rbg/code/mallows/data/wikielements.tar.gz  
 tar -zxvf wikielements.tar.gz  
-得到:  
-├──wikielements    
-│  ├──wikielements.text         
-│  ├──wikielements.vocab  
-│  └──...  
-
-
-File paths of WIKI-10K we used:
-https://drive.google.com/drive/folders/1dYPGOBhXK3kY6ib5pmIKEVmZ5athMMXO
-
-下载并解压WIKI-727K之后，把上面链接中的`dev_random_paths`,`test_random_paths`,`train_random_paths`分别放在`wiki_727\dev`,`wiki_727\test`,`wiki_727\train`路径下，并都改名为`random_paths`
-
-下载完并解压所有数据集，一共得到八个文件夹:wiki_727\choi\wikicites\wiki_50\clinical\manifesto\WikiSection\wikielements，记得在parameters.py中修改对应的路径.
 
 # 代码简介
 |文件(夹)名|作用|
