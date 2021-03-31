@@ -33,12 +33,10 @@ pip install -r requirements.txt
 │  │  └──train  
 │  ├──wiki_50    
 │  ├──wikisection    
-│  │  ├──wikisection_en_city_test.json  
-│  │  ├──wikisection_en_city_validation.json  
-│  │  ├──wikisection_en_city_train.json  
-│  │  ├──wikisection_en_disease_test.json  
-│  │  ├──wikisection_en_disease_validation.json  
-│  │  └──wikisection_en_disease_train.json  
+│  │  ├──en_disease_validation  
+│  │  ├──en_disease_train  
+│  │  ├──en_disease_test  
+│  │  └──...  
 │  ├──choi  
 │  │  ├──4  
 │  │  ├──3  
@@ -78,10 +76,8 @@ wget https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0&p
 tar -xjf wiki_test_50.tar.bz2  
 
 WIKI-SECTION:
-wget https://github.com/sebastianarnold/WikiSection/raw/master/wikisection_dataset_json.tar.gz  
-mkdir wikisection  
-tar -zxvf wikisection_dataset_json.tar.gz -C wikisection  
-rm wikisection/*_de_*  
+wget https://github.com/sebastianarnold/WikiSection/raw/master/wikisection_dataset_ref.tar.gz  
+mkdir wikisection & tar -zxvf wikisection_dataset_ref.tar.gz -C wikisection  
   
 CHOI:  
 手动下载 https://github.com/koomri/text-segmentation/tree/master/data/choi  
@@ -110,23 +106,9 @@ ELEMENTS:
 wget http://groups.csail.mit.edu/rbg/code/mallows/data/wikielements.tar.gz  
 tar -zxvf wikielements.tar.gz  
 
-# 代码简介
-|文件(夹)名|作用|
-|-|-|
-|models|所有基准模型(treelstm_sr\latent_sr\freq_sr\sequence_sr=TextSeg\bert_sr=Bert+Bilstm)\DSG_SEG\Encode_model|
-|data|8个数据集的加载程序(wiki\choi\clinical\wikisection\wikielements\wikicites\wiki50\manifesto)|
-|encoder|5种词向量初始化方式(word2vec\bert\randn\one-hot\glove)|
-|run.py|主程序|
-|train\validate\test.py|分别定义了训练\验证\测试函数|
-|parameters.py|接收外部参数|
-|utils.py|工具函数|
-|evaluation_utils.py|计算Pk和Accuracy|
-|judgement.py|样例分析|
-
-
-# 代码运行(仅展示部分)
+# 代码运行
 ```python
-python run.py [--etype {one_hot,glove,randn,w2v,bert}] [--encoder_fine_tune]
+python run.py [--etype {one_hot,w2v,bert}] [--encoder_fine_tune]
               [--sr_choose {f_model,l_model,s_model,t_model,g_model,b_model,random_baseline}]
               [--tr_choose {balanced,left,right}]
               [--gr_choose {texting,DSG_GCN}]
