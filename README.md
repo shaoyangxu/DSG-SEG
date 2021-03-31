@@ -38,29 +38,83 @@ tar -xjf wiki_727K.tar.bz2
 │  ├──dev  
 │  └──train  
 
-wiki_test_50:
-wget https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0&preview=wiki_test_50.tar.bz2
-tar -xjf wiki_test_50.tar.bz2
-解压完毕得到:
-
+wiki_test_50:  
+wget https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0&preview=wiki_test_50.tar.bz2  
+tar -xjf wiki_test_50.tar.bz2  
+解压完毕得到:data  
+为了方便区分:mv data wiki_50  
 
 WIKI-SECTION:
-https://github.com/sebastianarnold/WikiSection
+wget https://github.com/sebastianarnold/WikiSection/raw/master/wikisection_dataset_json.tar.gz  
+mkdir wikisection  
+tar -zxvf wikisection_dataset_json.tar.gz -C wikisection  
+rm wikisection/*_de_*  
+得到:  
+├──wikisection  
+│  ├──CREDIT  # not used  
+│  ├──LICENSE  # not used  
+│  ├──SOURCES  # not used  
+│  ├──wikisection_en_city_test.json  
+│  ├──wikisection_en_city_validation.json  
+│  ├──wikisection_en_city_train.json  
+│  ├──wikisection_en_disease_test.json  
+│  ├──wikisection_en_disease_validation.json  
+│  ├──wikisection_en_disease_train.json  
+│  └──wikisection_en_city_test.json  
+  
+CHOI:  
+手动下载 https://github.com/koomri/text-segmentation/tree/master/data/choi  
+mkdir choi  
+放入文件，得到:  
+├──choi  
+│  ├──4  
+│  ├──3  
+│  ├──2  
+│  └──1  
+  
+MANIFESTO:  
+手动下载 https://github.com/koomri/text-segmentation/tree/master/data/manifesto
+mkdir manifesto
+放入文件，得到:
+├──manifesto    
+│  ├──61620_201211.txt  
+│  ├──61620_200811.txt  
+│  ├──61620_200411.txt  
+│  ├──61320_201211.txt  
+│  ├──61320_200811.txt  
+│  └──61320_200411.txt  
+  
+CLINICAL:  
+手动下载 https://github.com/pinkeshbadjatiya/neuralTextSegmentation/tree/master/code/data/clinical
+mkdir clinical
+放入文件，得到:
+├──clinical    
+│  ├──000.ref   
+│  ├──001.ref  
+│  └──...  
+  
+CITIES:  
+wget http://groups.csail.mit.edu/rbg/code/mallows/data/wikicities-english.tar.gz  
+tar -zxvf wikicities-english.tar.gz  
+rm -r wikicities-english/test  
+mv wikicities-english/training/* wikicities-english/  
+rm -r wikicities-english/training  
+mv wikicities-english wikicities  
+得到:  
+├──wikicities    
+│  ├──wikicities.merged_text       
+│  ├──wikicities.text  
+│  └──...  
 
-CHOI:
-https://github.com/koomri/text-segmentation/tree/master/data/choi
+ELEMENTS:  
+wget http://groups.csail.mit.edu/rbg/code/mallows/data/wikielements.tar.gz  
+tar -zxvf wikielements.tar.gz  
+得到:  
+├──wikielements    
+│  ├──wikielements.text         
+│  ├──wikielements.vocab  
+│  └──...  
 
-CLINICAL:
-https://github.com/pinkeshbadjatiya/neuralTextSegmentation/tree/master/code/data/clinical
-
-CITIES:
-http://groups.csail.mit.edu/rbg/code/mallows/data/wikicities-english.tar.gz
-
-ELEMENTS:
-http://groups.csail.mit.edu/rbg/code/mallows/data/wikielements.tar.gz
-
-MANIFESTO:
-https://github.com/koomri/text-segmentation/tree/master/data/manifesto
 
 File paths of WIKI-10K we used:
 https://drive.google.com/drive/folders/1dYPGOBhXK3kY6ib5pmIKEVmZ5athMMXO
