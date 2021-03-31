@@ -23,9 +23,10 @@ python依赖库
 pip install -r requirements.txt
 ```
 
-# 必要资源
+# 必要资源（假设所有文件均下载到了/data路径下）
 word2vec:
-https://drive.google.com/a/audioburst.com/uc?export=download&confirm=zrin&id=0B7XkCwpI5KDYNlNUTTlSS21pQmM
+wget https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz
+
 
 WIKI-727K, WIKI-50:
 https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0
