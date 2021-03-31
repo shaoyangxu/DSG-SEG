@@ -6,14 +6,11 @@ Graph Neural Networks》](https://arxiv.org/abs/2004.13826)([TextING的代码](h
 谢谢他们的工作。
 
 # 论文简介
+![image](https://user-images.githubusercontent.com/59757561/113157597-9ee79600-926d-11eb-9480-4c0f3214823b.png)
 
-<div align=center>
-<img src="https://user-images.githubusercontent.com/59757561/111023162-67c25980-8412-11eb-8c70-0c0b28849fe4.png">
-</div>
+我们提出了一个基于篇章结构图网络的话题分割模型——DSG-SEG，如上图所示.具体的，模型把每一个篇章单独构建成图，图中包含了单词、句子节点，以及单词节点之间、单词和句子节点之间的邻接关系；接着，模型把图作为输入，对GGNN网络进行迭代，句子节点之间因此通过共有的邻接单词节点产生了间接的信息交互；最终，模型得到了具有全局语义信息的句子向量表示，并将其送入Bi-LSTM网络进行分割点的预测。
 
-我们提出了一个基于篇章结构图网络的话题分割模型——DSG-SEG，如上图所示.具体的，模型把每一个篇章单独构建成图，图中包含了单词、句子节点，以及单词节点之间、单词和句子节点之间的邻接关系；接着，模型把图作为输入，对GGNN网络进行迭代，句子节点之间因此通过共有的邻接单词节点产生了间接的信息交互；最终，模型得到了具有全局语义信息的句子向量表示，并将其送入Bi-LSTM网络进行分割点的预测.
-
-我们对比了六种基准模型:latent-sr\latent-sr\Bert+Bi-LSTM\tree-sr-left\TextSeg\Bert+Bi-LSTMnft，我们的模型在诸多数据集上同时取得了最好的结果指标和时间性能.
+我们对比了六种基准模型:latent-sr\latent-sr\tree-sr-left\TextSeg\Bert+Bi-LSTM\Bert+Bi-LSTMnft（除TextSeg外，其它基准模型皆为我们复现）我们的模型在诸多数据集上同时取得了最好的结果指标和时间性能。
 
 # 环境配置
 python3.7
@@ -26,7 +23,7 @@ python依赖库
 pip install -r requirements.txt
 ```
 
-# 需要的资源
+# 必要资源
 word2vec:
 https://drive.google.com/a/audioburst.com/uc?export=download&confirm=zrin&id=0B7XkCwpI5KDYNlNUTTlSS21pQmM
 
