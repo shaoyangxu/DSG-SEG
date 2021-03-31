@@ -24,12 +24,25 @@ pip install -r requirements.txt
 ```
 
 # 必要资源（假设所有文件均下载到了/data路径下）
-word2vec:
-wget https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz
+word2vec:  
+wget https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz  
+gzip -d GoogleNews-vectors-negative300.bin.gz  
+解压完毕得到:GoogleNews-vectors-negative300.bin  
+  
+WIKI_727K:  
+wget https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0&preview=wiki_727K.tar.bz2  
+tar -xjf wiki_727K.tar.bz2  
+解压完毕得到:  
+├──wiki_727  
+│  ├──test  
+│  ├──dev  
+│  └──train  
 
+wiki_test_50:
+wget https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0&preview=wiki_test_50.tar.bz2
+tar -xjf wiki_test_50.tar.bz2
+解压完毕得到:
 
-WIKI-727K, WIKI-50:
-https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0
 
 WIKI-SECTION:
 https://github.com/sebastianarnold/WikiSection
