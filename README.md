@@ -26,6 +26,7 @@ pip install -r requirements.txt
 # 资源获取  
 假设所有资源保存在/data路径下，完成这部分，你将得到:  
 ├──data  
+│  ├──glove.6B.300d.txt  
 │  ├──GoogleNews-vectors-negative300.bin  
 │  ├──wiki_727    
 │  │  ├──test  
@@ -62,6 +63,11 @@ pip install -r requirements.txt
 │  │  ├──wikielements.vocab  
 │  │  └──...  
 
+glove:  
+wget http://nlp.stanford.edu/data/glove.6B.zip  
+unzip glove.6B.zip  
+rm glove.6B.(50d|100d|200d).txt  
+  
 word2vec:  
 wget https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz  
 gzip -d GoogleNews-vectors-negative300.bin.gz  
@@ -114,12 +120,12 @@ tar -zxvf wikielements.tar.gz
 python run.py [--etype {one_hot,glove,w2v,bert}] [--encoder_fine_tune]
               [--sr_choose {f_model,l_model,s_model,t_model,g_model,b_model,random_baseline}]
               [--tr_choose {balanced,left,right}]
-              [--gr_choose {texting,DSG_GCN}]
+              [--gr_choose {texting,DSE_SEG}]
               ...
 ```
 DSG_GCN:
 ```python
-python run.py --sr_choose=g_model --gr_choose=DSG_GCN
+python run.py --sr_choose=g_model --gr_choose=DSE_SEG
 ```
 -SENTNODE:
 ```python
@@ -127,7 +133,7 @@ python run.py --sr_choose=g_model --gr_choose=texting
 ```
 -PMI:
 ```python
-python run.py --sr_choose=g_model --gr_choose=DSG_GCN --pmi
+python run.py --sr_choose=g_model --gr_choose=DSG_SEG --pmi
 ```
 Bert+Bi-LSTMnft:
 ```python
@@ -143,7 +149,7 @@ python run.py --etype=bert --sr_choose=b_model --length_filter=40 --sent_num_fil
 ```
 tree-sr-left
 ```python
-sr_choose=t_model --tr_choose=left --length_filter=40 --sent_num_filter=60
+python run.py --sr_choose=t_model --tr_choose=left --length_filter=40 --sent_num_filter=60
 ```
 freq-sr:
 ```python
@@ -155,5 +161,5 @@ python run.py --etype=one-hot --sr_choose=l_model
 ```
 random-baseline:
 ```python
-python run.py --sr_choose=random_baseline --infer --train_bs=1 --dev_bs=1 --test_bs=1
+python run.py --sr_choose=random_baseline --infer --train_bs=1 --dev_bs=1 --test_bs=1  
 ```
