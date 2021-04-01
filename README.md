@@ -75,7 +75,7 @@ wiki_test_50:
 wget https://www.dropbox.com/sh/k3jh0fjbyr0gw0a/AADzAd9SDTrBnvs1qLCJY5cza?dl=0&preview=wiki_test_50.tar.bz2  
 tar -xjf wiki_test_50.tar.bz2  
 
-WIKI-SECTION:
+WIKI-SECTION:  
 wget https://github.com/sebastianarnold/WikiSection/raw/master/wikisection_dataset_ref.tar.gz  
 mkdir wikisection & tar -zxvf wikisection_dataset_ref.tar.gz -C wikisection  
   
@@ -85,13 +85,13 @@ mkdir choi
 放入文件夹  
   
 MANIFESTO:  
-手动下载 https://github.com/koomri/text-segmentation/tree/master/data/manifesto
-mkdir manifesto
+手动下载 https://github.com/koomri/text-segmentation/tree/master/data/manifesto  
+mkdir manifesto  
 放入文件夹  
   
 CLINICAL:  
-手动下载 https://github.com/pinkeshbadjatiya/neuralTextSegmentation/tree/master/code/data/clinical
-mkdir clinical
+手动下载 https://github.com/pinkeshbadjatiya/neuralTextSegmentation/tree/master/code/data/clinical  
+mkdir clinical  
 放入文件夹    
   
 CITIES:  
@@ -106,9 +106,12 @@ ELEMENTS:
 wget http://groups.csail.mit.edu/rbg/code/mallows/data/wikielements.tar.gz  
 tar -zxvf wikielements.tar.gz  
 
-# 代码运行
+# 代码运行 
+1. 永久修改parameters.py中，各个资源的路径，如`parser.add_argument("--wiki_path",type=str, default="/data/wiki_727")`  
+2. 永久修改parameters.py中，保存dataset和encoder的路径(用于避免重复读取)，如`parser.add_argument("--dataset_dir",type=str, default="/data/saved_dataset")`  
+3. 👇  
 ```python
-python run.py [--etype {one_hot,w2v,bert}] [--encoder_fine_tune]
+python run.py [--etype {one_hot,glove,w2v,bert}] [--encoder_fine_tune]
               [--sr_choose {f_model,l_model,s_model,t_model,g_model,b_model,random_baseline}]
               [--tr_choose {balanced,left,right}]
               [--gr_choose {texting,DSG_GCN}]
