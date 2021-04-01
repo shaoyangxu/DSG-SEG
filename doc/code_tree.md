@@ -31,8 +31,8 @@ DSE-SEG
 │   ├── latent_sr.py                                //隐式句子表示
 │   ├── seg_model.py                                //上层Bilstm网络，用于预测分割点
 │   ├── sequence_sr.py                              //序列句子表示
-│   ├── texting                                     //texting模型，也就是-SENTNODE消融模型
-│   └── treelstm_sr                                 //树形句子表示
+│   ├── texting.py                                  //texting模型，也就是-SENTNODE消融模型
+│   └── treelstm_sr.py                              //树形句子表示
 ├── encoder                                         //词向量
 │   ├── w2v_encoder.py                              //word2vec
 │   ├── randn_encoder.py                            //随机初始化
