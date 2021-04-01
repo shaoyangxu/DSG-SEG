@@ -1,3 +1,7 @@
+# 文件结构
+
+/data路径下的整体文件结构介绍如下：
+
 ├──data  
 │  ├──glove.6B.300d.txt  
 │  ├──GoogleNews-vectors-negative300.bin  
