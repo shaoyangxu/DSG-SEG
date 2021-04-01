@@ -1,0 +1,12 @@
+torch==1.7
+scipy
+transformers
+sklearn
+pathlib2
+termcolor
+tqdm
+nltk
+numpy
+segeval
+gensim==3.8.3
+jsonlines
