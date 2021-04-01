@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 # 资源获取  
 假设所有资源保存在/data路径下，完成这部分，你将得到:  
-[查看文件结构](https://github.com/beiweixiaoxu/DSG-SEG/edit/master/doc/file_tree.md)
+[查看文件结构](https://github.com/beiweixiaoxu/DSG-SEG/blob/master/doc/file_tree.md)
 
 glove:  
 wget http://nlp.stanford.edu/data/glove.6B.zip  
@@ -77,7 +77,7 @@ wget http://groups.csail.mit.edu/rbg/code/mallows/data/wikielements.tar.gz
 tar -zxvf wikielements.tar.gz  
 
 # 代码运行  
-[查看代码结构](https://github.com/beiweixiaoxu/DSG-SEG/edit/master/doc/file_tree.md)  
+[查看代码结构](https://github.com/beiweixiaoxu/DSG-SEG/blob/master/doc/code_tree.md)  
 两个修改:  
 1. 永久修改parameters.py中，各个资源的路径，如`parser.add_argument("--wiki_path",type=str, default="/data/wiki_727")`  
 2. 永久修改parameters.py中，保存dataset和encoder的路径(用于避免重复读取)，如`parser.add_argument("--dataset_dir",type=str, default="/data/saved_dataset")`  
