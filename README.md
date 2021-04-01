@@ -25,43 +25,7 @@ pip install -r requirements.txt
 
 # 资源获取  
 假设所有资源保存在/data路径下，完成这部分，你将得到:  
-├──data  
-│  ├──glove.6B.300d.txt  
-│  ├──GoogleNews-vectors-negative300.bin  
-│  ├──wiki_727    
-│  │  ├──test  
-│  │  ├──dev  
-│  │  └──train  
-│  ├──wiki_50    
-│  ├──wikisection    
-│  │  ├──en_disease_validation  
-│  │  ├──en_disease_train  
-│  │  ├──en_disease_test  
-│  │  └──...  
-│  ├──choi  
-│  │  ├──4  
-│  │  ├──3  
-│  │  ├──2  
-│  │  └──1  
-│  ├──manifesto    
-│  │  ├──61620_201211.txt  
-│  │  ├──61620_200811.txt  
-│  │  ├──61620_200411.txt  
-│  │  ├──61320_201211.txt  
-│  │  ├──61320_200811.txt  
-│  │  └──61320_200411.txt  
-│  ├──clinical      
-│  │  ├──000.ref   
-│  │  ├──001.ref  
-│  │  └──...  
-│  ├──wikicities      
-│  │  ├──wikicities.merged_text       
-│  │  ├──wikicities.text  
-│  │  └──...  
-│  ├──wikielements     
-│  │  ├──wikielements.text         
-│  │  ├──wikielements.vocab  
-│  │  └──...  
+[查看文件结构](https://github.com/beiweixiaoxu/DSG-SEG/edit/master/doc/file_tree.md)
 
 glove:  
 wget http://nlp.stanford.edu/data/glove.6B.zip  
@@ -112,10 +76,12 @@ ELEMENTS:
 wget http://groups.csail.mit.edu/rbg/code/mallows/data/wikielements.tar.gz  
 tar -zxvf wikielements.tar.gz  
 
-# 代码运行 
+# 代码运行  
+[查看代码结构](https://github.com/beiweixiaoxu/DSG-SEG/edit/master/doc/file_tree.md)  
+两个修改:  
 1. 永久修改parameters.py中，各个资源的路径，如`parser.add_argument("--wiki_path",type=str, default="/data/wiki_727")`  
 2. 永久修改parameters.py中，保存dataset和encoder的路径(用于避免重复读取)，如`parser.add_argument("--dataset_dir",type=str, default="/data/saved_dataset")`  
-3. 👇  
+样例:  
 ```python
 python run.py [--etype {one_hot,glove,w2v,bert}] [--encoder_fine_tune]
               [--sr_choose {f_model,l_model,s_model,t_model,g_model,b_model,random_baseline}]
