@@ -1,4 +1,4 @@
-# 《基于篇章结构图网络的话题分割》(Topic Segmentation via Discourse Structure Graph Network)
+# [《基于篇章结构图网络的话题分割》(Topic Segmentation via Discourse Structure Graph Network)](http://jcip.cipsc.org.cn/CN/Y2021/V35/I12/17)
 该仓库包含了《基于篇章结构图网络的话题分割》文章的代码和数据集，代码使用pytorch框架实现。
 我们的工作主要基于[《Text Segmentation as a Supervised Learning Task》](https://arxiv.org/abs/1803.09337) ，它的源代码是[text-segmentation](https://github.com/koomri/text-segmentation)。
 另外，我们的模型灵感主要来自于 [《Every Document Owns Its Structure: Inductive Text Classification via
